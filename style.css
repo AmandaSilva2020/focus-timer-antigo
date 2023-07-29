@@ -1,0 +1,89 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --primary-color: #323238;
+  --btn-bg:#E1E1E6;
+  --btn-bg-active: #02799D;
+  --btn-txt-color: #fff;
+  
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+body, button, span{
+  color: var(--primary-color);
+}
+
+body{
+  font-size: 1.6rem;
+  font-family: sans-serif;
+}
+
+button{
+  font-size: 5.6rem;
+  border: none;
+  background: none;
+}
+
+main{
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+}
+
+.container{
+  gap: 20rem;
+}
+
+#timer{
+  font-size: 9.6rem;
+}
+
+.active{
+  color: var(--btn-bg-active);
+}
+
+.sounds-wraper{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.2rem;
+}
+
+.sounds-wraper button{
+  width: 14rem;
+  height: 15rem;
+  border-radius: 2.4rem;
+  background-color: var(--btn-bg);
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+.button-wraper{
+  justify-content: space-between;
+}
+
+.sounds-wraper button.playing{
+  background-color: var(--btn-bg-active);
+  color: var(--btn-txt-color);
+}
+
+
+
+
+
+@media (max-width: 1000px) {
+  .container{
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
